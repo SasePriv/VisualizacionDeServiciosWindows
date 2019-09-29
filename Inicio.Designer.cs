@@ -48,7 +48,7 @@
             this.flowLayoutPanel2.Controls.Add(this.btn_stop);
             this.flowLayoutPanel2.Controls.Add(this.btn_pause);
             this.flowLayoutPanel2.Controls.Add(this.btn_resume);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(66, 623);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(110, 614);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(386, 44);
             this.flowLayoutPanel2.TabIndex = 1;
@@ -63,10 +63,11 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(520, 596);
+            this.listView1.Size = new System.Drawing.Size(588, 596);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // ch_name
             // 
@@ -95,6 +96,7 @@
             this.btn_start.TabIndex = 0;
             this.btn_start.Text = "Start";
             this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
             // btn_pause
             // 
@@ -104,6 +106,7 @@
             this.btn_pause.TabIndex = 1;
             this.btn_pause.Text = "Pause";
             this.btn_pause.UseVisualStyleBackColor = true;
+            this.btn_pause.Click += new System.EventHandler(this.btn_pause_Click);
             // 
             // btn_stop
             // 
@@ -113,6 +116,7 @@
             this.btn_stop.TabIndex = 2;
             this.btn_stop.Text = "Stop";
             this.btn_stop.UseVisualStyleBackColor = true;
+            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
             // 
             // btn_resume
             // 
@@ -122,16 +126,19 @@
             this.btn_resume.TabIndex = 3;
             this.btn_resume.Text = "Resume";
             this.btn_resume.UseVisualStyleBackColor = true;
+            this.btn_resume.Click += new System.EventHandler(this.btn_resume_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 669);
+            this.ClientSize = new System.Drawing.Size(612, 669);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicios";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
