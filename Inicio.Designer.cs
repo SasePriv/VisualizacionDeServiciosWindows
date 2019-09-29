@@ -133,6 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Inicio";
             this.Text = "Servicios";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
